@@ -1,6 +1,6 @@
 import java.util.Arrays;
 
-public class Programming {
+public class SortArrayDigitFrequency {
 
     public static int count(int n, int k) {
         int count = 0;
