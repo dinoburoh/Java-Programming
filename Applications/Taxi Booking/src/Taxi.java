@@ -30,8 +30,6 @@ public class Taxi {
     public void taxiDetails(Taxi t, Taxi selectedTaxi) {
         if(t == selectedTaxi)
             t.totalPriceGenerated += t.priceGenerated;
-        // System.out.println("Taxi No:          Total Earnings:");
-        // System.out.println("");
         System.out.println("Taxi - " + t.taxiID + "  Total Earnings: Rs. " + t.totalPriceGenerated);
         System.out.println("");
         System.out.println("Taxi-ID   From    To     PickupTime    DropTime   Amount");
