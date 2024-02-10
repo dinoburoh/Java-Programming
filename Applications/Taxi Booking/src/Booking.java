@@ -80,34 +80,36 @@ public class Booking {
     }
 
     public static void main(String[] args) {
+
         Scanner input = new Scanner(System.in);
         System.out.print("Taxi count: ");
         int taxiCount = input.nextInt();
         Taxi[] taxis = new Taxi[taxiCount];
-
         for (int i = 0; i < taxiCount; i++) {
             taxis[i] = new Taxi();
         }
 
-        System.out.println("Press 1 for booking and 2 to print details");
-        int key = input.nextInt();
-
         while (true) {
 
+            System.out.println("Press 1 for booking and 2 to print details");
+            int key = input.nextInt();
+
             if (key == 1) {
-            System.out.println("Enter the pickup point (A,B,C,D,E,F) ");
-            char pickupPoint = input.next().charAt(0);
-            System.out.println("Enter the drop point (A,B,C,D, E, F) ");
-            char dropPoint = input.next().charAt(0);
-            System.out.println("Enter the pickup time after 8 in 24 hours");
-            int pickupTime = input.nextInt();
-            allocateTaxiIfAvailable(taxis, pickupPoint, dropPoint, pickupTime);
+                System.out.println("Enter the pickup point (A,B,C,D,E,F) ");
+                char pickupPoint = input.next().charAt(0);
+                System.out.println("Enter the drop point (A,B,C,D, E, F) ");
+                char dropPoint = input.next().charAt(0);
+                System.out.println("Enter the pickup time after 8 in 24 hours");
+                int pickupTime = input.nextInt();
+                allocateTaxiIfAvailable(taxis, pickupPoint, dropPoint, pickupTime);
+                continue;
             }
 
-            if(key == 2){
-                for(Taxi t: taxis){
+            if (key == 2) {
+                for (Taxi t : taxis) {
                     t.taxiDetails(t, t);
                 }
+                continue;
             }
         }
 
